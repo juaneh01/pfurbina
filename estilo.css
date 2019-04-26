@@ -1,0 +1,57 @@
+/* Primero el diseño movil, para que el navegador vaya midiendo el ancho de pantalla y lo muestre bonito */
+body{
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+}
+#cabecera-movil, #navigation{
+	top: 0;
+	margin-top: -1.2em;
+	background-color: #A96868;
+}
+ul.nav-items{
+	margin-left: -200vh;
+	top: 0;
+	margin-top: -1em;
+	background-color: #A96868;
+	width: 100vw;
+	min-height: 100vh;
+	position: fixed;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	line-height: 3em;
+	transition: margin-left 300ms ease;
+}
+.close, .open{
+	float: right;
+}
+#navigation:target .nav-items{
+	margin-left: 0;
+}
+.close{
+	display: none;
+}
+#navigation:target .open{
+	display: none;
+}
+#navigation:target .close{
+	display: block;
+	border-radius: 50%;
+	padding: 0.5em 1em;
+}
+.nav-items li{
+	min-width: 100vw;
+}
+.nav-items a{
+	text-decoration: none;
+	color: white;
+	padding: 1em;
+}
+.nav-items a:hover{
+	background-color: white;
+	color: black;
+}
